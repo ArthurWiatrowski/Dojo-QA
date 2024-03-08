@@ -9,14 +9,14 @@ Funcionalidade: Login
     E que o usuario preencha o campo de senha com "<Senha>"
     Quando ele clicar no botao de login
     Então o sistema faz o login
+    E   o sistema faz logout
     Exemplos:
-      | Usuario                 | Senha         |
-      | standard_user           | secret_saucez |
-      | locked_out_user         | secret_saucez |
-      | problem_user            | secret_saucez |
-      | performance_glitch_user | secret_saucez |
-      | error_user              | secret_saucez |
-      | visual_user             | secret_saucez |
+      | Usuario                 | Senha        |
+      | standard_user           | secret_sauce |
+      | problem_user            | secret_sauce |
+      | performance_glitch_user | secret_sauce |
+      | error_user              | secret_sauce |
+      | visual_user             | secret_sauce |
 
 
 

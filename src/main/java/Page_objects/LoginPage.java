@@ -11,12 +11,12 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
 
     }
-    @FindBy(how = How.NAME, using = "user-name")
+    @FindBy(how = How.ID, using = "user-name")
     public WebElement campoUsuario;
 
-    @FindBy(how = How.NAME, using = "password")
+    @FindBy(how = How.ID, using = "password")
     public WebElement campoSenha;
 
-    @FindBy(how = How.ID, using = "login-buton")
+    @FindBy(how = How.ID, using = "login-button")
     public WebElement botaoLogin;
 }
