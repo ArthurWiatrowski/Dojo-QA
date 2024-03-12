@@ -6,29 +6,27 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+import static Steps.Hook.*;
 
 public class LoginSteps {
-    WebDriver driver;
-    LoginPage page;
-    LogoutPage logoutPage;
-    WebDriverWait wait;
+
+
+    private static LoginPage page;
+    private static LogoutPage logoutPage;
+
+
 
     @Dado("que o usuario esteja na tela de login")
+
     public void telaLogin() {
-        if (driver == null) {
-            driver = new ChromeDriver();
-            page = new LoginPage(driver);
-            logoutPage = new LogoutPage(driver);
-            wait = new WebDriverWait(driver, Duration.ofSeconds(6));
-            driver.get("https://www.saucedemo.com/");
-        }
+
+        logoutPage = new LogoutPage(driver);
+        page = new LoginPage(driver);
+        driver.get("https://www.saucedemo.com/");
     }
+
 
     @E("que o usuario preencha o campo de usuario com {string}")
     public void preencherUsuario(String usuario) {
