@@ -19,9 +19,7 @@ public class LoginSteps {
 
 
     @Dado("que o usuario esteja na tela de login")
-
     public void telaLogin() {
-
         logoutPage = new LogoutPage(driver);
         page = new LoginPage(driver);
         driver.get("https://www.saucedemo.com/");
